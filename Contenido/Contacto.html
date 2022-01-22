@@ -1,57 +1,49 @@
 <html>
-<title>DuoTech</title>
-<header>   
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DuoTech</title>
+  
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-</header>
-    <body>
-      <div class="navbar-fixed">
-        <nav class="light-green darken-4">
-          <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">Logo DuoTech</a>
-            <a href="#" data-target="menu responsive" class="sidenav-trigger">
-              <i class="material-icons">menu</i>  
-            </a>
-            
-            <ul class="right hide-on-small-and-down">
+  
+  <body>  
+    <!--navbar escritorio-->    
+    <div class="navbar-fixed"><!--Fija la barra de navegacion-->
+      <nav class="light-green darken-4"><!--Color a la barra de navegacion-->
+        <div class="nav-wrapper container"><!--Contenedor del navbar-->
+          <a href="#"  class="brand-logo">Logo DuoTech</a>          
+          <a href="#" class="sidenav-trigger" data-target="menu-responsive"><i class="material-icons">menu</i></a><!--Muestra menu de hamburguesa dentro del navbar en resoluciones chicas-->
+          <!--Menu normal-->
+          <ul class="right hide-on-small-and-down"> <!--si la resolucion es chica se oculta--> 
               <li><a href="../index.html">Inicio</a></li>
-              <li><a href="../Contenido/acerca de.html">Acerca</a></li>
+              <li><a href="../Contenido/acerca de.html">Acerca de</a></li>
               <li><a href="../Contenido/Servicios.html">Servicios</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="../Contenido/Contacto.html">Contacto</a></li>
               <li><a href="../Contenido/quienes somos.html">¿Quienes Somos?</a></li>
-              <li><a href="#">Clientes</a></li>
-              <li>
-                <ul id="id_drop" class="dropdown-content">
-                  <li><a href="#">Item</a></li>
-                  <li><a href="#">Item</a></li>
-                  <li class="divider">item</li>
-                  <li><a href="#">Item</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <ul class="sidenav red" id="menu responsive">
-          <li><a href="../index.html">Inicio </a></li>
-          <li><a href="../Contenido/acerca de.html">Acerca</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="#">¿Quienes Somos?</a></li>
-          <li><a href="#">Clientes</a></li>
-        </ul>    
-      </div>
-    <!--
-        Contacto
-    -->
+              <li><a href="../Contenido/clientes.html">Clientes</a></li>
+          </ul>      
+        </div>  
+      </nav>
+    </div>
     
-                    <!--.s Moviles  .m Tablets  .l Desktop  .lx desktop large -->
-                    <!--    90%         85%          70%          70% -->
-             <!--colums      12          12          12            12  -->
-             <div class="col s12 center-align"><h3>Contáctanos</h3></div> 
+    <!--Menu Responsivo-->
+    <div>
+      <ul class="sidenav" id="menu-responsive"><!--sidenav oculta menu hamburguesa con resolucion alta / aparece solo en resolucion baja-->
+        <li>
+          <div class="user-view">
+            <div class="background"><img src="../Imagenes/5dec47012d257.jpeg" alt=""></div> <!--Background menu responsivo-->
+            <a href="#"><img src="../Imagenes/software.jpg" alt="" class="circle"></a><!--Icono Usuario menu responsivo-->
+            <a href="#"><span class="name white-text">DuoTech</span></a>
+            <a href="#"><span class="email white-text">email@duotech.com</span></a>
+           </div></li>
+           <li><a href="../index.html">Inicio</a></li>
+           <li><a href="../Contenido/acerca de.html">Acerca de</a></li>
+           <li><a href="../Contenido/Servicios.html">Servicios</a></li>
+           <li><a href="../Contenido/Contacto.html">Contacto</a></li>
+           <li><a href="../Contenido/quienes somos.html">¿Quienes Somos?</a></li>
+           <li><a href="../Contenido/clientes.html">Clientes</a></li>
+      </ul>
+    </div>
+    <!--Contenido-->
+    <div class="col s12 center-align"><h3>Contáctanos</h3></div> 
              <div class="section container">
                <div class="row">
                  <form class="s12">
@@ -95,79 +87,64 @@
                </div>
              </div>       
             </div>
-        <!--Termina Contacto -->
-
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            M.AutoInit();
-            var elems = document.querySelectorAll('.slider');
-            var instances = M.Slider.init(elems,{
-            });
-            var elems = document.querySelectorAll('.materialboxed');
-            var instances = M.Materialbox.init(elems);
-          });
-        </script>
-
-        
-<footer class="page-footer grey darken-3">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col s12 m12 l5 xl5">
-        <h5>DuoTech <br>LOGO</bt></h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi et delectus ut vitae ullam quaerat ex iure eaque beatae! Architecto.</p>
-    
-      <div class="row">
-        <div class="col s2"><img src="../Icons/email.png" width="20" height="auto"></div>
-        <div class="col s2">contacto@duotech.com</div>
-      </div>
-
-      <div class="row">
-        <div class="col s2"><img src="../Icons/Phone.png" width="20" height="auto"></div>
-        <div class="col s2 center-align">(52)123-456-7891</div>
-      </div>
-    </div>
-      
-    <div class="col s12 m12 l4 xl4">
-        <h5>Siguenos</h5>
-        <br>
+    <!--Termina Contenido-->
+    <!--Inicia Footer-->
+    <footer class="page-footer grey darken-3">
+      <div class="container">
         <div class="row">
-          <div class="col s2"><img src="../Icons/Facebook.png" width="20" height="auto"></div>
-          <div class="col s2"><li><a href="#" class="white-text text-lighten-4">DuoTech</a></li></div>
-        </div>
+          <div class="col l5 s12">
+            <h5 class="white-text">Logo <br> DuoTech</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <ul><li><i class="material-icons left">mail</i>contacto@duotech.com</a></li></ul>
+            <ul><li><i class="material-icons left">phone</i>&#40;&#43;&#41;&#32;012&#45;345&#45;6789</a></li></ul>
+            
+          </div>
 
-        <div class="row">
-          <div class="col s2"><img src="../Icons/Instagram.png" width="20" height="auto"></div>
-          <div class="col s2"><li><a href="#" class="white-text text-lighten-4">DuoTech</a></li></div>
-        </div>
-
-        <div class="row">
-          <div class="col s2"><img src="../Icons/YouTube.png" width="20" height="auto"></div>
-          <div class="col s2"><li><a href="#" class="white-text text-lighten-4">DuoTech</a></li></div>
-        </div>
-
-      </div>
-      
-      <div class="col s12 m12 l3 xl3">
-        <div class="row">
-          <div class="col s2">
-            <h5>MAPS</h5>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1306.4454236087358!2d-97.32239906146425!3d20.44800836180863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1640727285604!5m2!1ses-419!2smx" width="200" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <div class="col l4 s12">
+            <h5 class="white-text">Siguenos </h5>
+            <ul><li><a href="https://www.facebook.com " target="_blank"><i class="material-icons left">facebook</i>Facebook</a></li></ul>
+            <ul><li><a href="https://api.whatsapp.com/send?phone=3512041739" target="_blank"><i class="material-icons left">whatsapp</i>WhatsAPP</a></li></ul>
+            <ul><li><a href="https://www.google.com.mx/maps/preview" target="_blank"><i class="material-icons left">location_on</i>Ubicacion</a></li></ul>
           </div>
           
+          <!--Mapa del sitio-->
+          <div class="col l3 s12">
+            <h5 class="white-text">Mapa del Sitio</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#">Inicio</a></li>
+              <li><a class="grey-text text-lighten-3" href="Contenido/acerca de.html">Acerca de</a></li>
+              <li><a class="grey-text text-lighten-3" href="Contenido/Servicios.html">Servicios</a></li>
+              <li><a class="grey-text text-lighten-3" href="Contenido/Contacto.html">Contacto</a></li>
+              <li><a class="grey-text text-lighten-3" href="Contenido/quienes somos.html">¿Quienes Somos?</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+      <!--copyright-->
+      <div class="footer-copyright grey darken-4">
+        <div class="container center-align">© 2022 Copyright DuoTech  Todos los Derechos Reservados</div>
+      </div>
+    </footer>
+        
+<!--Inicia JavaScrip Materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<!--Inicializa Java Menu / slides-->
+  <script>
 
-    </div>
-  </div>
-  
-  <div class="footer-copyright grey darken-4">
-    <div class="container center-align">DuoTech Derechos Reservados</div>
-  
-  </div>
-</footer>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.slider');
+      var instances = M.Slider.init(elems, {
+      });
 
-      </body>
+      var elems = document.querySelectorAll('.materialboxed');
+      var instances = M.Materialbox.init(elems);
+
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+
+    });
+
+  </script>
+
+  </body>
 </html>
