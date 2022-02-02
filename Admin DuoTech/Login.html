@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Admin DuoTech </title>
+	<link rel="stylesheet" href="css/normalize.css">    
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="font-cover" id="login">
+    <div class="container-login center-align">
+        <div style="margin:15px 0;">
+            <i class="zmdi zmdi-account-circle zmdi-hc-5x"></i>
+            <p>Inicia sesión con tu cuenta</p>   
+        </div>
+        <form action="">
+            <div class="input-field">
+                <input id="email" type="email" class="validate">
+                <label for="password"><i class="zmdi zmdi-account"></i>&nbsp; Nombre</label>
+            </div>
+            <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="pass"><i class="zmdi zmdi-lock"></i>&nbsp; Contraseña</label>
+            </div>
+            <button id="iniciar" class="waves-effect waves-teal btn-flat">Ingresar &nbsp; <i class="zmdi zmdi-mail-send"></i></button>
+        </form>
+        <div class="divider" style="margin: 20px 0;"></div>
+        <!--<a href="#">Crear cuenta</a>-->
+        
+    </div>
+    
+    <!-- Scripts-->
+    <script src="js/sweetalert.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.2.0.min.js"><\/script>')</script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!--FIREBASE-->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-auth.js";
+  
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyCpAaGF326bjc-fj0U4YuuSxWmJvYvQbks",
+          authDomain: "duotech-site.firebaseapp.com",
+          databaseURL: "https://duotech-site-default-rtdb.firebaseio.com",
+          projectId: "duotech-site",
+          storageBucket: "duotech-site.appspot.com",
+          messagingSenderId: "913927579945",
+          appId: "1:913927579945:web:1d0d2bb596e5c957196f38",
+          measurementId: "G-18Y6VKC5TZ"
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+  
+        document.getElementById('iniciar').addEventListener('click', function(event){
+            event.preventDefault();
+          const email = document.getElementById('email').value
+          const password = document.getElementById('password').value
+          console.log(email, password)
+  
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    location = 'contenido/home.html' 
+                    console.log(loggedin)
+                    // ...
+                })
+                .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode + errorMessage)
+                });
+        })
+      </script>
+    
+</body>
+</html>
